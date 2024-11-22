@@ -11,8 +11,15 @@
     <input type="text" id="name" placeholder="name" style="margin-bottom: 15px; width: 90%; padding: 10px; font-size: 18px;"><br>
     <input type="email" id="email" placeholder="Email" style="margin-bottom: 15px; width: 90%; padding: 10px; font-size: 18px;"><br>
     <input type="tel" id="number" placeholder="Number" style="margin-bottom: 15px; width: 90%; padding: 10px; font-size: 18px;"><br>
-    <button type="submit"  style="width: 50%; font-size: 18px; background-color: brown; color: beige; border-radius: 3px; padding: 10px;">SUBMIT</button>
+    <button type="submit" id="button" style="width: 50%; font-size: 18px; background-color: brown; color: beige; border-radius: 3px; padding: 10px;">SUBMIT</button>
     </form>
 </body>
+<script>
+    document.getElementById("button").addEventListener('click', ()=>{
+        str = document.getElementById("name").value
+        if(str.length > 25) alert("name is more than 25 characters")
+        alert("Your are successfully registered")
+    })
+</script>
 
 </html>
